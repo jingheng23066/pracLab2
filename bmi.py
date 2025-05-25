@@ -14,3 +14,21 @@ def calculate_bmi(height, weight):
     elif(bmi > 25.0):
         print("Overweight")
         return 1
+
+def display_main_menu():
+    print("enter height followed by weight seperated by commas")
+    return
+
+def get_user_input():
+    numInp = input()
+    inpList = numInp.split(",")
+    return inpList
+
+def main():
+    display_main_menu()
+    num_list= get_user_input()
+    float_list = list(map(float, num_list))
+    calculate_bmi(float_list[0], float_list[1])
+
+if __name__ == "__main__":
+    main()
